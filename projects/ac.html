@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="../css/style.css" rel="stylesheet">
+
+    <link rel="icon" href="../img/logo.png">
+
+    <title>Shannon Lu</title>
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <nav class="navbar navbar-light navbar-expand-md">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="../index.html"><img src = "../img/logo.png" width = "45" height = "auto"></a>
+          <!-- <a class="navbar-brand" href="index.html">shannon lu</a> -->
+        </div>
+        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbar-content">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link ml-auto active" href="../index.html">WORK</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href = "../resume_web.pdf" target="_blank">RESUME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../about.html">ABOUT</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="container-fluid">
+
+      <div class="container">
+        <br><br>
+        <h1>Academic Coaching Reporting System</h1>
+
+        <div class="row">
+          <div class="col-lg-8">
+            <p><i>
+            An implementation of an automated reporting dashboard to visualize Pre- and Post- assessment data from Academic Coaching sessions</i></p>
+          </div>
+        </div>
+
+        <hr><br>
+
+
+        <div class="row background-col">
+          <div class="col-sm-3">
+            <p>
+              <b class="small-heading">SYSTEM</b> <br>
+              Google Suite <br><br>
+              <b class="small-heading">TERM</b> <br>
+              Spring 2019 <br><br>
+              <b class="small-heading">MENTORS</b> <br> 
+              Michael P.<br> TC Eley
+            </p>
+          </div>
+
+          <div class="col-1">
+          </div>
+
+          <div class="col-lg-8">
+            <p>
+                <!-- <b class="small-heading">Project Description </b><br> -->
+                Up until a few years ago, Carnegie Mellon University’s Academic Development program used a paper system to keep track of Academic Coaching sessions, feedback, and assessments. Since then, the department has digitized their data collection processes by creating a Google Form and Sheet system to keep track of student responses after each coaching session. <br><br>
+
+                <b class="smaller-heading">PROJECT CHALLENGE</b><br>
+                <div class="emphasis-smaller">How can we turn the recorded data into something actionable and insightful, something that could drive decision making to improve the program?</div> 
+            </p>
+          </div>
+      </div>
+
+      <br><hr><br>
+      <div class="row container">
+          <div class="col-sm-2">
+          </div>
+
+          <div class="col-lg-8">
+            <br>
+            <p>
+              <!-- <b class="big-heading">Background</b> -->
+              <br> 
+              Academic Coaching is a program that helps students acquire more effective and efficient study skills. Student Academic Coaches conduct workshops and individualized sessions to help other students focus on skills such as time management, avoiding procrastination, forming productive habits, preparing for exams, taking lecture notes, and more. 
+              <br><br>
+              When students join the program, they are asked to fill out a survey on their study habits and attitudes toward academic achievement. The survey is based on the Motivated Strategies for Learning Questionnaire (MSLQ) publication and covers topics such as mindset, belongingness, self-efficacy, and types of study skills. At the end of their sessions, usually at the end of the semester, the same survey is completed.
+              <br><br>
+              At the time, the data from pre- and post- assessments was not being utilized in any way. However, we (I along with the Department Leads) recognized the potential to leverage the information to measure the effectiveness of the Academic Coaching program – both holistically and for individual students. We decided to create a system to visualize the assessment results and integrate it within the reporting dashboard for each student.
+            </p>
+            <br><br><br><br>
+
+            <p>
+              <b class="big-heading">Visualizing Results</b>
+              <br> 
+              The initial phase of this project involved researching and understanding the problem space. Using the publication from the National Center for Research to Improve Postsecondary Teaching and Learning, I familiarized myself with what the assessment measures as well as how the attributes relate and interact with each other, and what factors contribute most to academic success.
+              <br><br> 
+              Sample statements from the pre- and post- assessment:
+              <ul>
+                <li> <i>You can learn new things, but you can't change your basic intelligence (Mindset)</i></li>
+                <li> <i>I am confident I can understand the most complex material presented by the instructor (Self-efficacy)</i></li>
+                <li> <i>Even if I have trouble learning the material in this class, I try to do the work on my own, without help from anyone(Study Skills)</i></li>
+                <li> <i>I think in the same way as people who do well at CMU (Belongingness)</i></li>
+              </ul>
+             
+              <br>
+              The questions from the survey asked respondents to indicate whether they agreed or disagreed with the statements using a Likert scale. For Self-efficacy, Study Skills, and Belongingness the scale runs from 1 - 7, and for Mindset 1 - 6, with 1 representing ‘Strongly Disagree’ and 6 or 7 representing ‘Strongly Agree’. The next step was figuring out how to measure the response levels. 
+              <br><br> 
+              We decided to take an average of the Likert scale responses for each category because it would give us an understandable estimate of where individuals are at first glance. We were originally hesitant to take this approach, since it assumes each categorical statement is weighted evenly and has the same degree of separation between them. However, we made this decision because we prioritized the ease of understanding for the coaches. 
+              <br><br> 
+              For the most part greater response values (agreeing with the statement) corresponded to more feeling of belonging, more self-efficacy, better study skills, and a growth mindset. However, because of how some statements were worded, they required a transformation of the response before taking the average to accurately measure the category. Using the MSLQ publication as guidance, we went through the 41 statements to determine whether this process would be required. 
+              <br><br> 
+              Some examples of reverse-encoded statements: 
+              <ul>
+                <br>
+                <li> <i>When course work is difficult, I either give up or only study the easy parts</i></li>
+                <li> <i>I often find that I don't spend very much time on this course because of other activities</i></li>
+                <li> <i>I often procrastinate on assignments for this class</i></li>
+              </ul>
+
+              <br>
+              After deciding how the responses would be quantified, we worked on visualizing the measures. For the categories Mindset, Belongingness, and Self-efficacy, there was only one value that encompasses where individuals lie in that aspect, so we used a one-dimensional scale to visually respresent it.  
+              <br><br> 
+              <div class="row">
+                <div class="col-2">
+                </div>
+                <div class="col-lg-8">
+                  <img src="../img/proj-imgs/academicdev-1.png" draggable = "false" class="img-fluid">
+                  <p class="text-center" style="font-size: 75%;"><br>no longer have access to the systems so please accept hand-drawn diagrams ~</p>
+                </div>
+                <div class="col-2">
+                </div>
+              </div>
+              
+              <br>
+
+              For the Study Skills category, there were different types of study skills being measured, so we categorized the statements based on the MSLQ report and showed values for each type of skill. 
+              <br><br> 
+              <div class="row">
+                <div class="col-2">
+                </div>
+                <div class="col-lg-8">
+                  <img src="../img/proj-imgs/academicdev-2.png" draggable = "false" class="img-fluid">
+                </div>
+                <div class="col-2">
+                </div>
+              </div>
+              <br><br> 
+              When designing the structure of the dashboard, we took into account how important each category was and how often that piece of information would be used. The primary goal of the visualization is to allow Academic Coaches to get a holistic baseline understanding of where the student is at regarding academic skills and attitude, which allows them to create more individualized plans of what to tailor sessions to. The organization of the information was designed in a way that features the most important and most useful categories. 
+              <br><br> 
+              <div class="row">
+                <div class="col-2">
+                </div>
+                <div class="col-lg-8">
+                  <img src="../img/proj-imgs/academicdev-3.png" draggable = "false" class="img-fluid">
+                </div>
+                <div class="col-2">
+                </div>
+              </div>
+              <br><br> 
+              Based on these importances, we decided the structure to look like this:
+              <br><br> 
+              <div class="row">
+                <div class="col-2">
+                </div>
+                <div class="col-lg-8">
+                  <img src="../img/proj-imgs/academicdev-4.png" draggable = "false" class="img-fluid">
+                  <p class="text-center" style="font-size: 75%;"><br>for each category, we also included a description of the category and its importance in academic development, as well as additional links for more information</p>
+                </div>
+                <div class="col-2">
+                </div>
+              </div>
+            </p>
+            <br><br><br>
+
+            <p>
+              <b class="big-heading">Implementation & Integration </b>
+              <br> 
+              One of the main priorities of this project was to provide additional information about individual students through the pre- and post- assessments, at no additional cost / effort by the coach or the department. This meant the visualization created needed to operate within the pre-existing system and populate automatically when the assessment is submitted.
+              <br><br>
+              Since the original systems were created using Google Forms and Google Sheets, it only made sense to integrate the new visualization as a part of the reporting Sheet. 
+              <br><br>
+              An overview of the existing system is as follows: <br><br>
+              <img src="../img/proj-imgs/academicdev-5.png" draggable = "false" class="img-fluid">
+              <br><br><br>
+              The new visualization we created would exist on another tab of the same reporting Sheet, so the information would all be in one centralized place. This was implemented through linking data from different Google Sheet files and creating graphs according to the correct data. Because of this system, the information would automatically populate when the Forms are submitted. 
+            </p>
+
+            <br><br><br><br>
+            <p>
+              <b class="big-heading">Conclusion </b>
+              <br> 
+              Through the addition of the visualizations of the Pre- and Post- assessments in the reporting dashboard, both Academic Coaches and students in the program can gain an understanding of the impact of the coaching sessions. Looking solely at the Pre- assessment results, coaches can prepare sessions based on the individual’s needs and areas for potential growth. Comparing Pre- and Post- assessment visualizations allows the department to understand trends across students in the program and identify which areas students are improving the most and which should be focused on more.
+              <br><br>
+              This project allowed me to experience first-hand the effects of a complete digital transformation and help create something tangible that would allow data to push forward the operations of an organization by tracking results and identifying areas for improvement. I witnessed the lingering effects of the inefficiency of a paper system, and saw how much more efficient and impactful a digital process is.  
+              <br>
+            </p>
+
+          </div>
+
+          <div class="col-2">
+          </div>
+
+      </div>
+      
+   
+    
+    </div>
+    <br><br><br><br>
+
+    <div class="row text-center">
+      <div class="col-md-4"></div>
+      <div class="col-md-4 back-to-work">
+          <a href="../index.html#work">- back to all work -</a>
+      </div>
+      <div class="col-md-4"></div>
+    </div>
+
+    <footer>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-3 text-center">
+            <p>&copy Built with <span style="font-size: 80%; display: inline;">♥️</span> and ☕ by Shannon Lu</p>
+          </div>
+
+          <div class="col-sm-7"></div>
+
+          <div class="col-sm-1 text-right">
+            <a href="mailto:shannon.lu358@gmail.com">EMAIL</a>
+          </div>
+          <div class="col-sm-1">
+            <a href="http://www.linkedin.com/in/shannon-lu/" target="_blank">LINKEDIN</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>
+

@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="../css/style.css" rel="stylesheet">
+
+    <link rel="icon" href="../img/logo.png">
+
+    <title>Shannon Lu</title>
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <nav class="navbar navbar-light navbar-expand-md">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="../index.html"><img src = "../img/logo.png" width = "45" height = "auto"></a>
+          <!-- <a class="navbar-brand" href="index.html">shannon lu</a> -->
+        </div>
+        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbar-content">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link ml-auto active" href="../index.html">WORK</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href = "../resume_web.pdf" target="_blank">RESUME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../about.html">ABOUT</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="container-fluid">
+      <div class="container">
+      <br><br>
+      <h1>APOGEE Radial Velocity Data Research </h1>
+      
+      <div class="row">
+        <div class="col-lg-8">
+          <p><i>
+          An analysis of the proportion of multiple-star systems using APOGEE radial velocity data from the Sloan Digital Sky Survey, utilizing both supervised and unsupervised learning methods</i></p>
+        </div>
+      </div>
+
+      <hr><br>
+
+
+      <div class="row background-col">
+        <div class="col-sm-3">
+          <p>
+            <b class="small-heading">RECOGNITION</b> <br>
+            Early Research Award at Meeting of the Minds, Carnegie Mellon University’s annual Research Symposium <br><br>
+            <b class="small-heading">LANGUANGE</b> <br>
+            R <br><br>
+            <b class="small-heading">TERM</b> <br>
+            Spring 2018 <br><br>
+            <b class="small-heading">MENTOR</b> <br>
+            Professor Peter Freeman
+          </p>
+        </div>
+
+        <div class="col-1">
+        </div>
+
+        <div class="col-lg-8">
+          <p>
+              <b class="smaller-heading">BACKGROUND</b><br>
+              In the Milky Way galaxy, stars exist either in isolation or as part of a multiple-star system. The true proportion of stellar systems that contain multiple stars is unknown. However, the APOGEE data from the Sloan Digital Sky Survey provides information on radial velocities, or velocities relative to the Earth, for over 100,000 stars, which we can use to attempt to predict whether a given star exists on its own or as part of a system. The radial velocities are useful because they can indicate whether or not a star wobbles back and forth relative to the system’s overall center of mass, and typically the brightest star in a multiple-star system may be seen to wobble, whereas there is no wobble for a single star. 
+            <br><br>
+              <b class="smaller-heading">RESEARCH QUESTIONS</b><br>
+              1) Using methods of unsupervised learning, can we identify the populations of single and multiple-star systems? <br>
+              2) If someday we acquired data with known single and multiple-star systems, how well would machine learning algorithms perform in classifying the data?  
+
+          </p>
+        </div>
+      </div>
+      <br><hr><br>
+ 
+
+
+      <div class="row container">
+          <div class="col-2">
+          </div>
+
+          <div class="col-lg-8">
+            <br>
+            <p>
+              <b class="big-heading">Exploring the Data</b>
+              <br> 
+              The Sloan Digital Sky Survey's APOGEE experiment (Majewski et al. 2017) has collected multiple instances of high-resolution spectra for over 100,000 stars in the Milky Way. Each spectrum contains Doppler-shifted atomic lines; the magnitude of the shifts are proportional to the star's radial velocity. The dataset for this project, from SDSS Data Release 13, contains light curves (radial velocities as a function of time) for 75,276 stars, with the number of observations per star ranging from 2 to 28. The range of values for the radial velocities is -155 to 147 km/s, with an expected radial velocity error of approximately 0.1 km/s.<br><br>
+
+              The following features were extracted from each light curve after its values were adjusted so as to have zero mean:
+              <div class="row">
+                <div class="col-1"></div>
+                <div class="col-lg-10">
+                  <img src="../img/proj-imgs/apogee-1.png" draggable = "false" class="img-fluid">
+                </div>
+                <div class="col-1"></div>
+              </div>
+
+              <br><br>
+              Examples of APOGEE light curves, depicted by plotting the radial velocity values over time:<br> 
+              <div class="row">
+                <div class="col-md-6">
+                  <img src="../img/proj-imgs/apogee-3.png" draggable = "false" class="img-fluid">
+                  <p class="text-center" style="font-size: 75%;"><br>light curve for a single-star system</p>
+                </div>
+                <div class="col-md-6">
+                  <img src="../img/proj-imgs/apogee-4.png" draggable = "false" class="img-fluid">
+                  <p class="text-center" style="font-size: 75%;"><br>light curve for a multiple-star system</p>
+                </div>
+              </div>
+            </p>
+
+
+            <br><br><br>
+
+            <p>
+              <b class="big-heading">Analyses</b>
+              
+              <div class="med-heading">Unsupervised Learning</div><br>
+              We apply K-means clustering to the extracted features in order to see whether we can visually identify the populations of multiple-star and single-star systems. We assume two clusters because there are two populations of interest. 
+              
+              <div class="row">
+                <div class="col-md-6">
+                  <img src="../img/proj-imgs/apogee-5.png" draggable = "false" class="img-fluid">
+                </div>
+                <div class="col-md-6">
+                  <img src="../img/proj-imgs/apogee-6.png" draggable = "false" class="img-fluid">
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-1"></div>
+                <div class="col-lg-10">
+                  <p class="text-center" style="font-size: 75%;"><br>Example results from a K-means clustering analysis, assuming two clusters</p>
+                </div>
+                <div class="col-1"></div>
+              </div>
+              <br>
+              In the figure above, we observe how the population of statistics stretches continuously from the regime of single-star systems (values near zero) to the regime of multiple-star systems (values far from zero). However, there is no easy way to draw a boundary between the two populations. This is not surprising because multiple-star systems can rotate perpendicularly to the line of sight and thus look like a single star because the radial velocities are measured with respect to the Earth and may not be changing. There is an overlap between the two populations of stellar systems, so we cannot cleanly separate them. 
+
+              <br><br><br><br>
+              <div class="med-heading">Supervised Learning</div> <br>
+              Here we address the question of whether, given a labeled dataset, commonly used machine learning algorithms would be helpful in classifying star systems. To generate labeled data, we use Python-based simulation software created by Carles Badenes (Pitt), Eric Alpert (CMU), and Peter Freeman. Without loss of generality, we assume that for these labeled data, the fraction of multiple-star systems is 0.5
+              <br><br>
+
+              <div class="row">
+                <div class="col-3"></div>
+                <div class="col-md-6">
+                  <img src="../img/proj-imgs/apogee-7.png" draggable = "false" class="img-fluid">
+                  <p class="text-center" style="font-size: 65%;"><br>Because the SVM algorithm runs slowly compared to random forest and neural networks, we estimate the SVM misclassification rates using a random subsample of 2000 stars (985 for training and 1015 for testing).</p>
+
+                </div>
+                <div class="col-3"></div>
+              </div>
+              <br>
+              We see that supervised learning algorithms can classify multiple-star systems relatively well. Compared to the trivial misclassification rate of 50%, the random forest classifier performs better with a misclassification rate of 13.6%. However, the classifiers can never be perfect because of the fact that radial velocities of some multiple-star systems will be similar to those of single stars because their stars move (nearly) perpendicularly to our line of sight. 
+
+              Looking at the results from random forest, we see that the median, range, and standard deviation are the most important features in classifying the stars as single entities or multiple-star systems. Range and standard deviation are highly correlated, so it is not surprising that their importances are similar.
+
+              <br><br> 
+              <div class="row">
+                <div class="col-1"></div>
+                <div class="col-lg-10">
+                  <img src="../img/proj-imgs/apogee-8.png" draggable = "false" class="img-fluid">
+                  <p class="text-center" style="font-size: 75%;"><br>Feature importances, as determined by random forest</p>
+                </div>
+                <div class="col-1"></div>
+              </div>
+
+              <br><br><br>
+              <b class="big-heading">Conclusion</b><br>
+              Given radial velocity data for 75,276 stars, we extracted features and performed both supervised and unsupervised learning analyses in order to try to classify stellar systems as single stars or multiple-star systems. Using unsupervised learning methods, we find that it is difficult to classify the stars into two distinct populations. With supervised learning, in a simulation where the proportion of multiple-star systems is known, we see that the machine learning algorithms are able to separate the data, however, there is still a misclassification rate of about 15% using these methods. 
+              <br><br>
+              The purpose of this project was to practice applying concepts learned in class to real-world data and drawing meaningful conclusions. This was my first semester conducting Statistics research, and this project won the Early Research Award at Meeting of the Minds, Carnegie Mellon University's annual Research Symposium.
+
+              <br><br><br><br>
+              <b class="big-heading">References</b><br>
+              Majewski S. R., et al. 2017, The Astronomical Journal, vol. 154, p. 94<br>
+              James, G., et al. 2013, An Introduction to Statistical Learning, Springer<br>
+              Bishop, C. M. 2006, Pattern Recognition and Machine Learning, Springer<br>
+
+            </p>
+          </div>
+
+          <div class="col-2">
+          </div>
+      </div>
+    </div>
+    </div>
+    <br><br><br><br>
+
+    <div class="row text-center">
+      <div class="col-md-4"></div>
+      <div class="col-md-4 back-to-work">
+          <a href="../index.html#work">- back to all work -</a>
+      </div>
+      <div class="col-md-4"></div>
+    </div>
+
+    <footer>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-3 text-center">
+            <p>&copy Built with <span style="font-size: 80%; display: inline;">♥️</span> and ☕ by Shannon Lu</p>
+          </div>
+
+          <div class="col-sm-7"></div>
+
+          <div class="col-sm-1 text-right">
+            <a href="mailto:shannon.lu358@gmail.com">EMAIL</a>
+          </div>
+          <div class="col-sm-1">
+            <a href="http://www.linkedin.com/in/shannon-lu/" target="_blank">LINKEDIN</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>
+

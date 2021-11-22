@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="../css/style.css" rel="stylesheet">
+
+    <link rel="icon" href="../img/logo.png">
+
+    <title>Shannon Lu</title>
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <nav class="navbar navbar-light navbar-expand-md">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="../index.html"><img src = "../img/logo.png" width = "45" height = "auto"></a>
+          <!-- <a class="navbar-brand" href="index.html">shannon lu</a> -->
+        </div>
+        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbar-content">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link ml-auto active" href="../index.html">WORK</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href = "../resume_web.pdf" target="_blank">RESUME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../about.html">ABOUT</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="container-fluid">
+      <div class="container">
+      <br><br>
+      <h1>Black & Veatch Incident Data Research </h1>
+      
+      <div class="row">
+        <div class="col-lg-8">
+          <p><i>
+          An analytics dashboard for Black & Veatch to understand historical data on recorded injuries and incidents, with prediction models to forecast for future projects</i></p>
+        </div>
+      </div>
+
+      <br><hr><br><br>
+
+
+      <div class="row background-col">
+        <div class="col-sm-3">
+          <p>
+            <b class="small-heading">RECOGNITION</b> <br>
+            Third Place in Statistics at Meeting of the Minds, Carnegie Mellon's annual Research Symposium <br><br>
+            <b class="small-heading">LANGUANGE / SYSTEM</b> <br>
+            R, Python, Flask, HTML, CSS, JavaScript <br><br>
+            <b class="small-heading">TERM</b> <br>
+            Fall 2018 <br><br>
+            <b class="small-heading">TEAM</b> <br> 
+            Shreya P., Irina J., Adin A.<br><br>
+            <b class="small-heading">MENTORS</b> <br> 
+            Rebecca Nugent, Peter Freeman, Ben L.
+          </p>
+        </div>
+
+        <div class="col-1">
+        </div>
+
+        <div class="col-lg-8">
+          <p>
+              <!-- <b class="small-heading">Introduction </b><br> -->
+              <a href="https://www.bv.com/" target="_blank">Black & Veatch</a> is a global engineering, procurement and construction services firm, specializing in energy, water and telecommunications. Within these industries, workplace incidents and injuries come with the job. In the fall of 2018, Black & Veatch began a working relationship with Carnegie Mellon University’s Department of Statistics to help push forward an initiative to utilize data analytics and statistics to improve their business.
+              <!-- This project served as a proof-of-concept for a larger investment in this partnership.  -->
+            <br><br>
+              <b class="smaller-heading">PROJECT GOAL</b><br>
+              <!-- How can we best understand incident trends to help create a more proactive method for injury prevention and minimize the consequences of injuries that occur during their projects?  -->
+              <div class="emphasis">How can we best understand incident trends to create a more proactive method for injury prevention?</div>
+
+            <br>
+              <!-- <b class="small-heading">Project Overview</b><br> -->
+              Our team tackled this challenge by first analyzing the historical data on incidents and injuries, and creating the infrastructure to build appropriate datasets that would help contextualize the occurrences. We then decided to create an intuitive and accessible method for interacting with the analyses, so we built a web application where users can subset the data, create visualizations, and run our models. Due to NDA restrictions, the following is only a high level overview of the project. 
+
+          </p>
+        </div>
+      </div><br>
+      <br><hr><br><br>
+ 
+
+
+      <div class="row container">
+          <div class="col-2">
+          </div>
+
+          <div class="col-lg-8">
+            <p>
+              <b class="big-heading">1. Understanding the Data</b>
+              <br> 
+             Black & Veatch houses their data on incidents and injuries through a third-party safety management software. Incidents are recorded manually and employees are encouraged to report every incident - from a minor laceration to a broken bone. The way that the data is stored separates information about projects (such as number of workers on a project, location, business line, year, etc.) from the incident data. 
+             <br><br>
+
+             While we could download the information about incidents directly from the software, we had to scrape the data regarding projects and monthly statistics. We did this by collecting cookie information from the third-party website and writing a Python script. 
+
+             <br><br>
+             Once we had collected the relevant data, we merged the three datasets into two as diagrammed below. The monthly statistics and project information provided context into how many projects were being worked on, how many hours were going into each project, and how many employees were assigned to each project. This allowed us to calculate incident rates for different projects and time periods.
+
+             <br><br>
+             <div class="row">
+                <div class="col-1"></div>
+                <div class="col-lg-10">
+                  <img src="../img/proj-imgs/bv-1.png" draggable = "false" class="img-fluid">
+                </div>
+                <div class="col-1"></div>
+              </div>
+            </p>
+
+            <br><br><br><br>
+            <p>
+              <b class="big-heading">2. Building an Interactive Web Application</b>
+              <br> 
+              Since we decided that we wanted to create a tool for Black & Veatch that would allow them to visualize analyses for different datasets, we created a web application using Flask, a Python web framework. The interface allows for interactive data filtering options, gives exploratory data analysis for filtered data, and predicts injury type and injury rates for filtered criteria. 
+             <br><br>
+
+              <div class="row">
+                <div class="col-1"></div>
+                <div class="col-lg-10">
+                  <img src="../img/proj-imgs/bv-2.png" draggable = "false" class="img-fluid">
+                  <p class="text-center" style="font-size: 75%;"><br>The graphs on the right included visualizations of hours worked per project, workers per project, incidents by type, incidents per month, and frequency of key words text analysis. </p>
+                </div>
+                <div class="col-1"></div>
+              </div>
+            </p>
+
+            <br><br><br><br>
+            <p>
+              <b class="big-heading">3. Experimenting with Different Models</b>
+              <br> 
+              After experimenting around with different models we could use to predict future incident rates and types, we decided to use XGBoost. We created two different models - one for predicting the number of injuries per hour per month, and one for the three most likely injury types, assuming that an incident would occur. 
+             <br><br>
+
+              The decision to predict these two outcomes was influenced by the fact that the incident and injury occurrence rates were so low compared to the number of hours and projects worked. Because of this, we had to predict injuries per hour rather than for a larger time period, and what type of injury it would be if one were to happen. 
+              <br><br>
+              In addition to showing the predicted values, we visualized the results using a partial dependence plot, which shows the marginal effect of a feature on a predicted outcome.  
+            </p>
+
+            <br><br><br><br>
+
+            <p>
+              <b class="big-heading">4. Takeaways and Future Work </b>
+              <br> 
+              Our final product is a platform where Black & Veatch can input specifications for a new project and display trends for similar projects completed in the past, as well as run the models to predict incident rate and incident types. The web application interface includes exploratory data analysis performed on a filtered subset, as well as our models to predict the number of incidents per hour per month and what the three most likely incident types would be if an incident were to occur.              
+              <br><br>
+              We presented our semester’s work to Black & Veatch employees, and they recognized the value of utilizing a data-driven platform to drive decision making on injury prevention programs. They decided to continue their partnership with the Statistics Department at CMU and invested more into the furthering of our work. 
+
+              <br><br>
+              On a personal level, this project was extremely challenging yet rewarding to work on because I was able to see the interdisciplinary aspect of my education come together. As the only member of the team with (limited) experience with web applications, my role was primarily to build out the interface and bring together the front-end and back-end of the system.
+            </p>
+
+          </div>
+
+          <div class="col-2">
+          </div>
+      </div>
+    </div>
+    </div>
+    <br><br><br><br>
+
+    <div class="row text-center">
+      <div class="col-md-4"></div>
+      <div class="col-md-4 back-to-work">
+          <a href="../index.html#work">- back to all work -</a>
+      </div>
+      <div class="col-md-4"></div>
+    </div>
+
+    <footer>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-3 text-center">
+            <p>&copy Built with <span style="font-size: 80%; display: inline;">♥️</span> and ☕ by Shannon Lu</p>
+          </div>
+
+          <div class="col-sm-7"></div>
+
+          <div class="col-sm-1 text-right">
+            <a href="mailto:shannon.lu358@gmail.com">EMAIL</a>
+          </div>
+          <div class="col-sm-1">
+            <a href="http://www.linkedin.com/in/shannon-lu/" target="_blank">LINKEDIN</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>
+
